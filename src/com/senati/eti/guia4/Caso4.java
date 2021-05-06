@@ -7,7 +7,7 @@ public class Caso4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		float suma=0, c;
+		float suma=0, c=0;
 		int num_par=0, num_impar=0;
 		
 		Integer[] num = new Integer[5];
