@@ -12,8 +12,9 @@ public class Cajero {
 		String[] arrnombre = {"Joe Castillo", "Rosa Flores", "Carlos Benavides",
 							"Sara Montes", "Juan Santos"};
 		float[] arrsaldo= {300, 750, 900, 1100, 0};
-		String codigo="", opc1="Si", opc_Op="Si";
-		int contra=0, nr=0, opc2=0, opc3=0, monto=0;
+		
+		String codigo="", opc1="Si", opc_Op="Si", cliente="";
+		int contra=0, nr=0, opc2=0, opc3=0, opc4=0, monto=0, monto1=0, transf=0;
 		
 		
 		while (opc1.equals("Si")) {
@@ -54,7 +55,6 @@ public class Cajero {
 						System.out.println("3. Depósitar   ");
 						System.out.println("4. Transferir");
 						System.out.println("5. Pago de Servicios  ");
-						System.out.println("6. Regresar  ");
 						System.out.println("-------------------");
 						System.out.print("¿Qué operación realizará?: ");
 						opc2=sc.nextInt();
@@ -113,17 +113,64 @@ public class Cajero {
 											arrsaldo[posicion]=arrsaldo[posicion]-monto;
 											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
 											break;}
-									
 									}
+							case 3:
+								System.out.println("Saldo a Depósitar");
+								System.out.println("-----------------");
+								System.out.println("1. 400.00");
+								System.out.println("2. 200.00");
+								System.out.println("3. 100.00");
+								System.out.println("4. 50.00");
+								System.out.println("5. Otra cantidad");
+								System.out.println("---------------");
+								System.out.print("Opción elegida: ");
+								opc4=sc.nextInt();
+								System.out.println("---------------");
+								switch (opc4) {
+									case 1:
+										System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+										arrsaldo[posicion]=arrsaldo[posicion]+400;
+										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+										break;
+									case 2:
+										System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+										arrsaldo[posicion]=arrsaldo[posicion]+200;
+										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+										break;
+									case 3:
+										System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+										arrsaldo[posicion]=arrsaldo[posicion]+100;
+										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+										break;
+									case 4:
+										System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+										arrsaldo[posicion]=arrsaldo[posicion]+50;
+										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+										break;
+									case 5:
+										System.out.print("Ingrese Monto: ");
+										monto1=sc.nextInt();
+										System.out.println("-------------------");
+										System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+										arrsaldo[posicion]=arrsaldo[posicion]+monto1;
+										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+										break;}
+								
+							case 4:
+								System.out.print("Cliente: ");
+								cliente=sc.nextLine();
+								System.out.println("Saldo a transferir:");
+								transf=sc.nextInt();
+								System.out.println("-------------------");
+								System.out.println("****Transferencia exitosa****");
+								
 								}
-							
-							
-							
-							
-							
-							
-							
-							
+								System.out.println("-------------------");
+								sc.nextLine();
+								System.out.print("¿Realizará otra operación? [Si|No]: ");
+								opc_Op=sc.nextLine();
+										
+								}	
 							}
 						
 						System.out.println("-------------------");
@@ -132,12 +179,13 @@ public class Cajero {
 						opc_Op=sc.nextLine();}
 				
 						while (opc_Op.equals("No")) {
-						System.out.println("-------------------");
-						sc.nextLine();
-						System.out.print("¿Desea continuar? [Si|No]: ");
-						opc1=sc.nextLine();}
+							System.out.println("-------------------");
+							sc.nextLine();
+							System.out.print("¿Desea continuar? [Si|No]: ");
+							opc1=sc.nextLine();
+							break;}
 				}
-			}
+			
 		while (opc1.equals("No")) {
 			System.out.println("* * * * * * * * * * * * * ");
 			System.out.println("Gracias por su preferencia");
