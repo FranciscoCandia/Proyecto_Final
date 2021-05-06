@@ -113,7 +113,7 @@ public class Cajero {
 											arrsaldo[posicion]=arrsaldo[posicion]-monto;
 											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
 											break;}
-									}
+									break;}
 							case 3:
 								System.out.println("Saldo a Depósitar");
 								System.out.println("-----------------");
@@ -155,23 +155,29 @@ public class Cajero {
 										arrsaldo[posicion]=arrsaldo[posicion]+monto1;
 										System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
 										break;}
+								break;
 								
 							case 4:
-								System.out.print("Cliente: ");
+								sc.nextLine();
+								System.out.print("Cliente.............: ");
 								cliente=sc.nextLine();
-								System.out.println("Saldo a transferir:");
+								System.out.print("Saldo a transferir..: ");
 								transf=sc.nextInt();
 								System.out.println("-------------------");
-								System.out.println("****Transferencia exitosa****");
+								System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+								arrsaldo[posicion]=arrsaldo[posicion]-transf;
+								System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+								System.out.println("\n****Transferencia exitosa****");
+								break;
 								
-								}
-								System.out.println("-------------------");
-								sc.nextLine();
-								System.out.print("¿Realizará otra operación? [Si|No]: ");
-								opc_Op=sc.nextLine();
-										
-								}	
 							}
+							System.out.println("-------------------");
+							sc.nextLine();
+							System.out.print("¿Realizará otra operación? [Si|No]: ");
+							opc_Op=sc.nextLine();
+										
+							}	
+						}
 						
 						System.out.println("-------------------");
 						sc.nextLine();
