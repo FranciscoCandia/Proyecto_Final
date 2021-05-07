@@ -19,9 +19,6 @@ public class Caso10 {
 		System.out.println("------------");
 		System.out.println("Área de un círculo..: " + a);
 		System.out.println("Perímetro...........: " + p);
-		
-		
-		
 
 	}
 
