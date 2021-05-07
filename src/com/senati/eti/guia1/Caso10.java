@@ -10,8 +10,8 @@ public class Caso10 {
 		
 		System.out.print("Radio...: ");
 		r = sc.nextInt();
-		a = ((r * r) * 3.14f);
-		p = (2* r * 3.14f) ;
+		a = ((r * r) * 3.1416f);
+		p = (2* r * 3.1416f) ;
 		
 		
 		System.out.println("------------");
