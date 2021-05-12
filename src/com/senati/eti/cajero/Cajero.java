@@ -7,11 +7,11 @@ public class Cajero {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		String[] arrcodigo = {"000-123", "000-456", "000-789", "000-159", "000-212"};
-		int[] contraseñas= {8008, 1234, 4586, 2591, 4856};
+		String[] arrcodigo = {"000-123", "000-456", "000-789", "000-159", "000-212","000-147","000-351","000-197"};
+		int[] contraseñas = {8008, 1234, 4586, 2591, 4856, 1235, 3510, 7841};
 		String[] arrnombre = {"Joe Castillo", "Rosa Flores", "Carlos Benavides",
-							"Sara Montes", "Juan Santos"};
-		float[] arrsaldo= {300, 750, 900, 1100, 0};
+							"Sara Montes", "Juan Santos","Diego Casas","Maria Prada","Miguel Sandoval"};
+		float[] arrsaldo= {600, 950, 1300, 1100, 0, 2500, 1800, 3800};
 		
 		String codigo="", opc1="SI", opc_Op="SI", cliente="";
 		int contra=0, opc2=0, opc3=0, opc4=0, monto=0, monto1=0, transf=0;
@@ -84,10 +84,10 @@ public class Cajero {
 									else {
 										System.out.println("Saldo a Retirar");
 										System.out.println("---------------");
-										System.out.println("1. 400.00");
-										System.out.println("2. 200.00");
-										System.out.println("3. 100.00");
-										System.out.println("4. 50.00");
+										System.out.println("1. S/400.00");
+										System.out.println("2. S/200.00");
+										System.out.println("3. S/100.00");
+										System.out.println("4. S/50.00");
 										System.out.println("5. Otra cantidad");
 										System.out.println("---------------");
 										System.out.print("Opción elegida: ");
@@ -100,9 +100,9 @@ public class Cajero {
 													break;}
 												else {
 													accion2=1;
-													System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+													System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 													arrsaldo[posicion]=arrsaldo[posicion]-400;
-													System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+													System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 													break;}	
 											case 2:
 												if (arrsaldo[posicion]<200) {
@@ -110,9 +110,9 @@ public class Cajero {
 													break;}
 												else {
 													accion2=1;
-													System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+													System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 													arrsaldo[posicion]=arrsaldo[posicion]-200;
-													System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+													System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 													break;}
 											case 3:
 												if (arrsaldo[posicion]<100) {
@@ -120,9 +120,9 @@ public class Cajero {
 													break;}
 												else {
 													accion2=1;
-													System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+													System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 													arrsaldo[posicion]=arrsaldo[posicion]-100;
-													System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+													System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 													break;}
 											case 4:
 												if (arrsaldo[posicion]<50) {
@@ -130,9 +130,9 @@ public class Cajero {
 													break;}
 												else {
 													accion2=1;
-													System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+													System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 													arrsaldo[posicion]=arrsaldo[posicion]-50;
-													System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+													System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 													break;}
 											case 5:
 												System.out.print("Ingrese Monto: ");
@@ -142,9 +142,9 @@ public class Cajero {
 													System.out.println("Saldo insuficiente");}
 												else if (monto>0){
 													accion2=1;
-													System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+													System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 													arrsaldo[posicion]=arrsaldo[posicion]-monto;
-													System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);}
+													System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);}
 												else {
 													System.out.println("Cantidad incorrecta");}
 												break;
@@ -156,10 +156,10 @@ public class Cajero {
 								case 3:
 									System.out.println("Saldo a Depositar");
 									System.out.println("-----------------");
-									System.out.println("1. 400.00");
-									System.out.println("2. 200.00");
-									System.out.println("3. 100.00");
-									System.out.println("4. 50.00");
+									System.out.println("1. S/400.00");
+									System.out.println("2. S/200.00");
+									System.out.println("3. S/100.00");
+									System.out.println("4. S/50.00");
 									System.out.println("5. Otra cantidad");
 									System.out.println("---------------");
 									System.out.print("Opción elegida: ");
@@ -168,27 +168,27 @@ public class Cajero {
 									switch (opc4) {
 										case 1:
 											accion3=1;
-											System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+											System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 											arrsaldo[posicion]=arrsaldo[posicion]+400;
-											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+											System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 											break;
 										case 2:
 											accion3=1;
-											System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+											System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 											arrsaldo[posicion]=arrsaldo[posicion]+200;
-											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+											System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 											break;
 										case 3:
 											accion3=1;
-											System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+											System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 											arrsaldo[posicion]=arrsaldo[posicion]+100;
-											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+											System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 											break;
 										case 4:
 											accion3=1;
-											System.out.println("Saldo Anterior: "+arrsaldo[posicion]);
+											System.out.println("Saldo Anterior: S/"+arrsaldo[posicion]);
 											arrsaldo[posicion]=arrsaldo[posicion]+50;
-											System.out.println("Nuevo Saldo: "+arrsaldo[posicion]);
+											System.out.println("Nuevo Saldo: S/"+arrsaldo[posicion]);
 											break;
 										case 5:
 											while (temp1==0) {
@@ -289,11 +289,12 @@ public class Cajero {
 										accion6=1;
 										while (a>0) {
 
-									        System.out.print("Ingrese la contraseña actual......: ");
+									        System.out.print("Ingrese la contraseña actual...: ");
 											contra=sc.nextInt();
 											if (contra!=contraseñas[posicion]) {
+												System.out.println("*********************");
 												System.out.println("Contraseña Incorrecta");
-												System.out.println("----------------------");
+												System.out.println("*********************");
 											}
 										    else {
 										    	while (a>0){
@@ -311,6 +312,7 @@ public class Cajero {
 										    			System.out.print("Reingrese la nueva contraseña..: ");
 										    			contra2=sc.nextInt();
 										    			if (contra2 == contra1) {
+										    				contraseñas[posicion]=contra2;
 										    				System.out.println("** Cambio realizado **");
 										    				break;
 										    		
